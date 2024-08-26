@@ -1,0 +1,129 @@
+---
+layout: default
+title: Schedule
+---
+{% include breadcrumb-2.html %}
+
+<!--
+  Load FullCalendar for schedule page.
+  Documentation available at: http://fullcalendar.io/
+
+  Things to do to configure your Schedule page:
+  (1) Edit the holidayData variable to include holidays appropriate for this semester.
+  (2) Delete the initialDate field in the FullCalendar constructor so that the calendar automatically
+      displays the current month.
+-->
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css">
+
+<style>
+  /* This is the CSS for the modal overlay that appears when the user has not selected a section. */
+  #modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+
+  #modal_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 10000;
+  }
+</style>
+<script src="//cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js"></script>
+
+<!-- This script defines the moreaEventData variable containing an array of events from Morea pages. -->
+<script src="schedule-info.js"></script>
+
+<!-- This script defines the moreaCourseSections variable containing an array of course sections normally defined in _config.yml but can be customized here. -->
+<script>
+  moreaCourseSections = {{ site.course_sections | jsonify }};
+</script>
+
+<!-- This script defines the holidayData variable containing an array of holidays. -->
+<script>
+  var holidayData = {
+    color: 'green',
+    events: [
+      { title: "Classes start", start: "2021-07-06" },
+      { title: "Holiday: Independence Day (Observed)", start: "2021-07-05" },
+      { title: "Classes end", start: "2021-07-30" },
+    ]
+  };
+</script>
+
+<!-- This is the select box populated with the array of course_sections set in _config.yml. The selected option 
+is used to filter calender events displayed. -->
+<div style="margin-bottom: 10px" class="container">
+  <h1>Schedule</h1>
+  <div id="modal_overlay">
+    <div class="modal_content" id="modal_content">
+      <div id="form-group">
+        <select class="form-control" style="width:auto" id="sectionSelect">
+          <option value="none">Please Select a Section</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div id='calendar'></div>
+</div>
+<script>
+  function setCalendar() {
+    // Get the events for the selected section. Events with "none" as the section appear in all calendars. For backward compatibility when no sections are defined for the start_date, the event section is set to "none". The moreaCourseSections.length === 0 check is for backward compatibility when no course sections are defined. 
+    let sectionEventData = moreaEventData.filter(obj => (obj.section === $("#sectionSelect").val() || obj.section === "none") || moreaCourseSections.length === 0);
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      eventColor: '#446e9b',
+      initialDate: '2021-07-01',
+      eventSources: [{ events: sectionEventData }, holidayData]
+    });
+    calendar.render();
+  }
+
+  document.addEventListener('DOMContentLoaded', setCalendar);
+  // Add course section select options
+  let selectBox = $("#sectionSelect");
+  // For backward compatibility, remove the selector if there is no array of course sections defined
+  if (moreaCourseSections.length === 0) {
+    $('#modal_overlay').remove();
+    selectBox.remove();
+  } else {
+    $.each(moreaCourseSections, function (index, value) {
+      selectBox.append($("<option></option>")
+        .attr("value", value)
+        .text(value));
+      // Set the default option of the select element
+      if (localStorage.getItem('defaultSection') !== null) {
+        selectBox.val(localStorage.getItem('defaultSection'));
+        $('#sectionSelect option[value="none"]').remove();
+        selectBox.off('click');
+        $('#modal_overlay').attr('id', '');
+        $('#modal_content').attr('id', '');
+      } else {
+        // No section has been selected yet, so model the selection box until a section is made       
+        selectBox.on('click', function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+        });
+      }
+    });
+    // When the user changes the section, update the calendar and store the section in local storage so it always starts with this section
+    selectBox.change(() => {
+      setCalendar();
+      localStorage.setItem('defaultSection', selectBox.val());
+      $('#sectionSelect option[value="none"]').remove();
+      selectBox.off('click');
+      $('#modal_overlay').attr('id', '');
+      $('#modal_content').attr('id', '');
+    });
+  }
+</script>
