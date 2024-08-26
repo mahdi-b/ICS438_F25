@@ -3,7 +3,7 @@
 
 # SITE SPECIFIC: The following fields are typically changed for each site
 name: ICS 438
-baseurl: /morea
+baseurl: /ics438fall25
 morea_theme: spacelab
 timezone: Pacific/Honolulu
 morea_navbar_items:
