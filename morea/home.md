@@ -27,3 +27,5 @@ ICS 438 is a series of [modules](/ics438fall25/modules), each taking approximate
 
 [Mahdi Belcaid](https://mahdi-b.github.io/) is an Associate Professor of Information and Computer Sciences at the University of Hawaii and the Hawaii Institute of Marine Biology. His research interests include computational biology, AI, translational research software, and data science.
 
+
+Attendance form can be accessed [here](https://www.cognitoforms.com/MahdiBelcaid/AttendanceICS438F25).

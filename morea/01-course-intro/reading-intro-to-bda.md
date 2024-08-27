@@ -14,5 +14,5 @@ Introductory exploration of big data, analytics, and data science. These concept
 
 
 
-Slides can be obtained [here](https://docs.google.com/presentation/d/1fHbeFdDOQZvlcMvvQLMDOF1hnJJ9KSvoX-lm5ziQUj0)
+Notebook can be obtained [here](reading-intro-to-bda.md)
 Note that you need to be logged in with you `hawaii.edu` to see the slides

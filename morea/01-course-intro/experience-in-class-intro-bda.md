@@ -1,5 +1,5 @@
 ---
-title: "Introduction Big Data Analytic"
+title: "Introduction Big Data Analytics"
 published: true
 morea_id: experience-in-class-intro-bda
 morea_type: experience
@@ -10,7 +10,7 @@ morea_labels:
 ---
 
 
-### In-Class Activity Instructions: Exploring Big Data
+### E01 In-Class Activity Instructions: Exploring Big Data
 
 **Objective:**  
 In this activity, you'll explore the concept of big data by working through a real-world scenario. You’ll estimate how much data is generated, prototype how long it would take to read and process this data on your computer, and gain an understanding of the challenges involved.
