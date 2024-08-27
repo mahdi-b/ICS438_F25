@@ -1,11 +1,11 @@
 ---
 
-title: "A01: Assessment of Python and OOP skills"
+title: "A03: Assessment of Big Data Formats"
 published: true
-morea_id: assessment-python-1
-morea_summary: Python and OOP
+morea_id: assessment-data-formats
+morea_summary: BDA Formats
 morea_outcomes_assessed:
- - outcome-python-1
+ - outcome-module-2
 morea_type: assessment
 morea_labels:
 morea_start_date: "2024-09-03T09:00"
@@ -16,11 +16,11 @@ morea_chartjs_colors: '["green", "yellow", "red"]'
 
 ---
 
-# A01: Assessment of the Python and OOP skills Module
+# A01: Assessment of the Big Data Formats Module
 
 ## Summary of results
 
-Here are the results of this assessment, which took place on September 03, 2024:
+Here are the results of this assessment, which took place on September XX, XXXX:
 
 {%  include assessment-chartjs.html  %}
 
