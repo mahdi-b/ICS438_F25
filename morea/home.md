@@ -16,7 +16,7 @@ This course is intended for upper undergraduates in computer science or computer
 
 ## Pedagogy
 
-ICS 438 is a series of [modules](/ics438fall25/modules), each taking approximately two weeks to complete. Each module has the following structure:
+ICS 438 is a series of [modules](/ics438fall25/modules/), each taking approximately two weeks to complete. Each module has the following structure:
 
   * [Learning outcomes](/ics438fall25/outcomes): Describing the major goals for the module.
   * [Readings and other online resources](/ics438fall25/readings): Providing background material.
