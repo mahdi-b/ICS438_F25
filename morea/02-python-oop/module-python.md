@@ -1,5 +1,5 @@
 ---
-title: "Python: Basics"
+title: "Python and OOP"
 published: true
 morea_coming_soon: false
 morea_id: python-oop
