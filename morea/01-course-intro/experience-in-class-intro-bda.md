@@ -56,3 +56,9 @@ Remember, this exercise doesn’t need to be complicated. The goal is to help yo
 
 **Additional Ideas:**  
 Feel free to think about other industries or types of data. For example, you might consider text data from customer reviews, image data from security cameras, or sensor data from smart city projects. The key is to understand the scale of data and how to approach handling it.
+
+
+#### Python for Profiling and Benchmarking
+You can find common methods and functions for profiling Python code and benchmarking programs [here](resources/respython_profiling_benchmarking.ipynb).
+
+
