@@ -59,6 +59,6 @@ Feel free to think about other industries or types of data. For example, you mig
 
 
 #### Python for Profiling and Benchmarking
-You can find common methods and functions for profiling Python code and benchmarking programs [here](resources/respython_profiling_benchmarking.ipynb).
+You can find common methods and functions for profiling Python code and benchmarking programs [here](resources/python_profiling_benchmarking.ipynb).
 
 
