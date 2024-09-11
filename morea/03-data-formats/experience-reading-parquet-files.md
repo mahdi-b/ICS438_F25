@@ -10,7 +10,7 @@ morea_labels:
 
 ### E03 Working Reading and Interacting with Parquet Files
 
-You and your team need to work offline to answer the following questions. Each team will be asked to highlight its work on a selected subset of these questions during the next class session.
+You and your team need to work offline to answer the following questions. All teams will be asked to highlight their work during the next class session.
 
 
 The NYC.gov website offers a variety of data, including records for yellow and green taxi trips. This data set includes details such as pick-up and drop-off times and locations, trip distances, itemized fares, rate types, payment methods, and the number of passengers as reported by drivers.
@@ -21,11 +21,11 @@ To read the parquet file, use the pyarrow library and answer the following quest
 
 * Why are values in each variable stored as sub-lists?
   * Hint: Examine the data type of each variable and refer to the appropriate documentation.
-  * How many sub-lists are in each variable?
-  * How many elements does each sub-list contain?
+  * How many sub-lists (Array Chunks) are in each variable?
+  * How many elements does each array chunk contain?
 * What is the total number of records in the file?
-* What are the times of the first and last instances in the data?
-* What types of payments are represented in the data?
+* What are the times of the first and last trip in file?
+* What types of payments are represented in the data (ex. Cash, Credit, etc.)?
 * Use the following compression schemes to write the table you've just read:
     * snappy, gzip, brotli, lz4, and again gzip
   * Utilize the pq library method: write_table(table, "file path", compression='snappy')
