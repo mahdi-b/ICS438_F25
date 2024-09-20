@@ -31,4 +31,4 @@ pythonCopydataset = ds.dataset("s3://ursa-labs-taxi-data/", partitioning=["year"
 Note that you have to properly import ds. Do you remember which library it's imported from?
 
 
-
+The solution can be found [here](resources/solution_bonus_questions.ipynb). 
