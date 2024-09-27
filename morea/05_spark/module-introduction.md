@@ -10,7 +10,7 @@ morea_readings:
   - reading-databricks-ebook
   - reading-databricks-cheatsheet
   - reading-spark-introduction-1
-  - reading-spark-introduction-1
+  - reading-spark-introduction-2
 morea_experiences:
   - experience-using-spark
 morea_type: module
