@@ -10,7 +10,7 @@ morea_readings:
   - reading-sampling-strategies-2
   - reading-sketching-examples
 morea_experiences:
-  - experience-sampling-wtih-clustering
+  - experience-random-projections
 morea_type: module
 morea_icon_url: /morea/06_sampling/sampling.jpeg
 morea_start_date: "2023-10-1"
