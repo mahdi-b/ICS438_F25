@@ -1,5 +1,5 @@
 ---
-title: "Introduction to clustering - 1" 
+title: "Text Representation: TF/IDF" 
 published: true
 morea_id: feature-engineering-intro
 morea_type: reading
@@ -8,7 +8,7 @@ morea_sort_order: 1
 morea_labels:
   - Jupyter Notebook
 ---
-### Feature Engineering in Text Documents
+### Text Representation: TF/IDF
 <br/>
 
 
