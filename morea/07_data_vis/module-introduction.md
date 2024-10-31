@@ -12,7 +12,7 @@ morea_experiences:
 morea_type: module
 morea_icon_url: /morea/07_data_vis/data_vis.png
 morea_start_date: "2023-10-8"
-morea_end_date: "2023-10-8"
+morea_end_date: "2023-10-10"
 morea_labels:
 morea_sort_order: 7
 ---
