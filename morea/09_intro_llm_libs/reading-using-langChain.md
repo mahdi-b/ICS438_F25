@@ -11,6 +11,6 @@ morea_labels:
 ### Usign LangChain
 <br/>
 
-You can access the notebook [here](resources/using_langchain.ipynb).
+You can access the notebook [here](resources/using_langChain.ipynb).
 
 <br/>
