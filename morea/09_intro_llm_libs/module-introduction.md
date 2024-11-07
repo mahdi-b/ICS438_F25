@@ -6,10 +6,12 @@ morea_id: intro-llms
 morea_outcomes:
 morea_readings:
   - reading-intro-intransformers
-  - reading-using-langChain 
+  - reading-using-langChain
+  - reading-faiss-datacamp
 morea_experiences:
+  - experience-faiss
 morea_type: module
-morea_icon_url: /morea/10_intro_llm_libs/transformers.png
+morea_icon_url: /morea/09_intro_llm_libs/transformers.png
 morea_start_date: "2024-10-29"
 morea_end_date: "2024-11-07"
 morea_labels:
